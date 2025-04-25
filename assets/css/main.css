@@ -1,4 +1,7 @@
 :root {
+    --color-text: #c4c6c8;
+    --color-bg: #030b0f;
+    --color-accent: #5daad3;
     --font-sans-serif: "Montserrat";
 }
 
@@ -6,4 +9,11 @@ body {
     width: 50vw;
     margin: 0 auto;
     font-family: var(--font-sans-serif), sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
 }

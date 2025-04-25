@@ -1,6 +1,6 @@
 ---
 draft: false
-type: ctf
+type: writeup
 date: {{ .Date }}
 params:
     category:

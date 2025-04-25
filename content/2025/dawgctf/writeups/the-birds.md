@@ -1,9 +1,9 @@
 ---
 draft: false
-type: ctf
+type: writeup
 date: 2025-04-25T14:53:13-04:00
 params:
-    category: "crypto"
+    category: "Cryptography"
 tags:
 - substitution-cipher
 title: "The Birds"

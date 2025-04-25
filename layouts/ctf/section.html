@@ -1,12 +1,14 @@
 {{ define "main" }}
+    <h2>{{ .Title }}</h2>
     {{ .Content }}
 
-    {{ $pages := where site.RegularPages "Type" "ctf" }}
-    {{ $paginator := .Paginate $pages }}
+    {{ $pages := .CurrentSection.RegularPages }}
+    {{ range .Params.categories }}
+        {{ $category_pages := where $pages "Params.category" . }}
 
-    {{ range $paginator.Pages }}
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <h3>{{ . }}</h3>
+        {{ range $category_pages }}
+          <h4><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
+        {{ end }}
     {{ end }}
-
-    {{ template "_internal/pagination.html" . }}
 {{ end }}
